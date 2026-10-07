@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071423" />
+    <meta name="description" content="Tarjeta digital de Yeffri Pulgar, Coordinador Siho-A en Master Tech C.A." />
+    <title>Yeffri Pulgar · Master Tech C.A.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#071423',
+              panel: '#0d2032',
+              steel: '#b8c5cf',
+              line: '#2a4254',
+              signal: '#f15a24',
+              electric: '#2d9cdb'
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      :root { color-scheme: dark; }
+      *, *::before, *::after { box-sizing: border-box; }
+      body {
+        min-width: 320px;
+        overflow-x: hidden;
+        background:
+          radial-gradient(circle at 84% 7%, rgba(45, 156, 219, .17), transparent 29%),
+          radial-gradient(circle at 4% 68%, rgba(241, 90, 36, .11), transparent 31%),
+          linear-gradient(145deg, #071423 0%, #0a1b2b 54%, #06111e 100%);
+      }
+      .blueprint {
+        background-image:
+          linear-gradient(rgba(184, 197, 207, .05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(184, 197, 207, .05) 1px, transparent 1px);
+        background-size: 30px 30px;
+        mask-image: linear-gradient(to bottom, black 0%, transparent 86%);
+      }
+      .button-sheen { position: relative; overflow: hidden; }
+      .button-sheen::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        transform: translateX(-115%);
+        background: linear-gradient(108deg, transparent 26%, rgba(255, 255, 255, .13), transparent 74%);
+        transition: transform 450ms ease;
+      }
+      .button-sheen:hover::after,
+      .button-sheen:focus-visible::after { transform: translateX(115%); }
+      :focus-visible { outline: 2px solid #f15a24; outline-offset: 3px; }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen overflow-x-hidden text-white antialiased">
+    <div class="blueprint pointer-events-none fixed inset-0 opacity-80" aria-hidden="true"></div>
+
+    <main class="relative mx-auto flex min-h-screen w-full max-w-md flex-col px-5 py-8 sm:py-12">
+      <header class="text-center">
+        <div class="mx-auto mb-7 flex h-28 w-56 items-center justify-center rounded-[1.75rem] border border-white/10 bg-white px-5 py-4 shadow-2xl shadow-black/30">
+          <img src="master-tech-logo.png" alt="Master Tech C.A." class="h-full w-full object-contain" />
+        </div>
+        <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-signal">Oil &amp; Gas · Industrial Solutions</p>
+        <h1 class="text-[2rem] font-bold leading-tight tracking-[-0.03em] text-white">Yeffri Pulgar</h1>
+        <p class="mt-2 text-base font-semibold text-steel">Coordinador Siho-A</p>
+        <p class="mt-1 text-sm text-slate-400">Master Tech C.A.</p>
+        <div class="mx-auto mt-5 h-px w-16 bg-signal/80" aria-hidden="true"></div>
+      </header>
+
+      <section class="mt-9" aria-labelledby="quick-actions-title">
+        <h2 id="quick-actions-title" class="sr-only">Acciones de contacto</h2>
+        <div class="grid gap-3">
+          <a class="button-sheen group flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl border border-signal/70 bg-signal px-5 py-4 text-center text-base font-bold text-white shadow-lg shadow-signal/20 transition hover:-translate-y-0.5 hover:bg-orange-500 active:translate-y-0" href="https://vcard.link/card/IzQ1.vcf" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true" class="text-xl">💾</span>
+            <span>Guardar Contacto</span>
+            <span aria-hidden="true" class="ml-auto text-lg opacity-75 transition group-hover:translate-x-1">→</span>
+          </a>
+          <a class="button-sheen group flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl border border-line bg-panel/90 px-5 py-4 text-center text-base font-bold text-white shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-steel/60 hover:bg-slate-800 active:translate-y-0" href="https://mastertechcorp.com" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true" class="text-xl">🌐</span>
+            <span>Sitio Web Oficial</span>
+            <span aria-hidden="true" class="ml-auto text-lg text-steel opacity-75 transition group-hover:translate-x-1">→</span>
+          </a>
+          <button id="brochure-button" class="button-sheen group flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl border border-line bg-panel/90 px-5 py-4 text-center text-base font-bold text-white shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-steel/60 hover:bg-slate-800 active:translate-y-0" type="button" aria-describedby="brochure-status">
+            <span aria-hidden="true" class="text-xl">📄</span>
+            <span>Descargar Brochure</span>
+            <span id="brochure-status" class="ml-auto rounded-full border border-white/15 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-steel">Próximamente</span>
+          </button>
+          <a class="button-sheen group flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl border border-line bg-panel/90 px-5 py-4 text-center text-base font-bold text-white shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-steel/60 hover:bg-slate-800 active:translate-y-0" href="https://drive.google.com/drive/folders/12oJT2dkcHcJ2nLl2TiHfUeHML-5NRZ9B?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true" class="text-xl">📊</span>
+            <span>Ver Overview de la Empresa</span>
+            <span aria-hidden="true" class="ml-auto text-lg text-steel opacity-75 transition group-hover:translate-x-1">→</span>
+          </a>
+        </div>
+      </section>
+
+      <div id="toast" class="pointer-events-none fixed bottom-5 left-1/2 z-10 w-[calc(100%-2.5rem)] max-w-sm -translate-x-1/2 translate-y-4 rounded-xl border border-line bg-panel px-4 py-3 text-center text-sm text-steel opacity-0 shadow-2xl transition-all" role="status" aria-live="polite"></div>
+
+      <footer class="mt-auto pt-12 text-center text-xs text-slate-500">
+        <p>Master Tech C.A.</p>
+        <p class="mt-2 text-slate-600">Venezuela</p>
+      </footer>
+    </main>
+
+    <script>
+      const button = document.getElementById('brochure-button');
+      const toast = document.getElementById('toast');
+      let toastTimer;
+      button.addEventListener('click', () => {
+        toast.textContent = 'El brochure estará disponible próximamente.';
+        toast.classList.remove('opacity-0', 'translate-y-4');
+        toast.classList.add('opacity-100', 'translate-y-0');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.add('opacity-0', 'translate-y-4');
+          toast.classList.remove('opacity-100', 'translate-y-0');
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
