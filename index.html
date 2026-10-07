@@ -89,11 +89,16 @@
             <span>Sitio Web Oficial</span>
             <span aria-hidden="true" class="ml-auto text-lg text-steel opacity-75 transition group-hover:translate-x-1">→</span>
           </a>
-          <button id="brochure-button" class="button-sheen group flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl border border-line bg-panel/90 px-5 py-4 text-center text-base font-bold text-white shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-steel/60 hover:bg-slate-800 active:translate-y-0" type="button" aria-describedby="brochure-status">
-            <span aria-hidden="true" class="text-xl">📄</span>
-            <span>Descargar Brochure</span>
-            <span id="brochure-status" class="ml-auto rounded-full border border-white/15 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-steel">Próximamente</span>
-          </button>
+          <div class="grid grid-cols-2 gap-3">
+            <a class="button-sheen flex min-h-14 items-center justify-center gap-2 rounded-2xl border border-line bg-panel/90 px-3 py-4 text-center text-sm font-bold text-white shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-steel/60 hover:bg-slate-800 active:translate-y-0" href="business-card.pdf" target="_blank" rel="noopener noreferrer">
+              <span aria-hidden="true" class="text-lg">👁</span>
+              <span>Vista previa</span>
+            </a>
+            <a class="button-sheen flex min-h-14 items-center justify-center gap-2 rounded-2xl border border-line bg-panel/90 px-3 py-4 text-center text-sm font-bold text-white shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-steel/60 hover:bg-slate-800 active:translate-y-0" href="business-card.pdf" download>
+              <span aria-hidden="true" class="text-lg">⬇</span>
+              <span>Descargar PDF</span>
+            </a>
+          </div>
           <a class="button-sheen group flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl border border-line bg-panel/90 px-5 py-4 text-center text-base font-bold text-white shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-steel/60 hover:bg-slate-800 active:translate-y-0" href="https://drive.google.com/drive/folders/12oJT2dkcHcJ2nLl2TiHfUeHML-5NRZ9B?usp=sharing" target="_blank" rel="noopener noreferrer">
             <span aria-hidden="true" class="text-xl">📊</span>
             <span>Ver Overview de la Empresa</span>
@@ -110,20 +115,5 @@
       </footer>
     </main>
 
-    <script>
-      const button = document.getElementById('brochure-button');
-      const toast = document.getElementById('toast');
-      let toastTimer;
-      button.addEventListener('click', () => {
-        toast.textContent = 'El brochure estará disponible próximamente.';
-        toast.classList.remove('opacity-0', 'translate-y-4');
-        toast.classList.add('opacity-100', 'translate-y-0');
-        clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => {
-          toast.classList.add('opacity-0', 'translate-y-4');
-          toast.classList.remove('opacity-100', 'translate-y-0');
-        }, 3000);
-      });
-    </script>
   </body>
 </html>
